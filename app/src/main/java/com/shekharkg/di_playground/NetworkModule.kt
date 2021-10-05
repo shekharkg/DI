@@ -9,6 +9,7 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
 
+    @Singleton
     @Provides
     fun provideDashboardRetrofitService(okHttpClient: OkHttpClient): DashboardRetrofitService {
         return Retrofit.Builder()
