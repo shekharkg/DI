@@ -7,6 +7,7 @@ import dagger.Subcomponent
 @Module(subcomponents = [DashboardComponent::class])
 class SubComponentModule {}
 
+@ActivityScope
 @Subcomponent
 interface DashboardComponent {
 
