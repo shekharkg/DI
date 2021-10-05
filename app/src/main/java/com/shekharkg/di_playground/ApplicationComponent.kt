@@ -4,4 +4,7 @@ import dagger.Component
 
 @Component
 interface ApplicationComponent {
+
+    fun inject(mainActivity: MainActivity)
+
 }
