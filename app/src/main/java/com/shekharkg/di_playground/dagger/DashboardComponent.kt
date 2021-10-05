@@ -1,4 +1,4 @@
-package com.shekharkg.di_playground
+package com.shekharkg.di_playground.dagger
 
 import dagger.Module
 import dagger.Subcomponent

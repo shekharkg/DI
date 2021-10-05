@@ -1,4 +1,4 @@
-package com.shekharkg.di_playground
+package com.shekharkg.di_playground.dagger
 
 import dagger.Component
 import javax.inject.Singleton

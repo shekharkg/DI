@@ -1,7 +1,8 @@
-package com.shekharkg.di_playground
+package com.shekharkg.di_playground.dagger
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.shekharkg.di_playground.R
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
