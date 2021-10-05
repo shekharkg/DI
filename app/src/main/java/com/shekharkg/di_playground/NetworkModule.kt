@@ -2,17 +2,24 @@ package com.shekharkg.di_playground
 
 import dagger.Module
 import dagger.Provides
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
+import javax.inject.Singleton
 
 @Module
 class NetworkModule {
 
     @Provides
-    fun provideDashboardRetrofitService(): DashboardRetrofitService {
+    fun provideDashboardRetrofitService(okHttpClient: OkHttpClient): DashboardRetrofitService {
         return Retrofit.Builder()
             .baseUrl("")
             .build()
             .create(DashboardRetrofitService::class.java)
+    }
+
+    @Provides
+    fun getOKHttpClient(): OkHttpClient {
+        return OkHttpClient()
     }
 
 }
