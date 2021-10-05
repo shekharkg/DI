@@ -1,4 +1,7 @@
 package com.shekharkg.di_playground
 
-class Repository {
+import javax.inject.Inject
+
+class Repository @Inject constructor(service: DashboardRetrofitService) {
+
 }
