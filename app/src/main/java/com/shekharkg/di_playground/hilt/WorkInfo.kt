@@ -1,15 +1,13 @@
 package com.shekharkg.di_playground.hilt
 
-class WorkInfo() {
+import javax.inject.Inject
 
-    lateinit var companyName: String
-    lateinit var yearOfExperience: String
-    lateinit var educationInfo: EducationInfo
+class WorkInfo @Inject constructor(
+    private var companyName: String,
+    private var exp: String,
+    private var educationInfo: EducationInfo
+) {
 
-    fun init(companyName: String, exp: String, educationInfo: EducationInfo) {
-        this.companyName = companyName
-        this.yearOfExperience = exp
-        this.educationInfo = educationInfo
-    }
+    fun asString() = "CompanyName: $companyName, Experience: $exp, Education: ${educationInfo.asString()}"
 
 }

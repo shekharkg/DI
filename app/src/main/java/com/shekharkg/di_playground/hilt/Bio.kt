@@ -2,10 +2,6 @@ package com.shekharkg.di_playground.hilt
 
 import javax.inject.Inject
 
-class Bio @Inject constructor(paramName: String, paramDob: String) {
-
-    var name: String = paramName
-    var dob: String = paramDob
-
+class Bio @Inject constructor(private var name: String, private var dob: String) {
     fun asString() = "Name: $name, DOB: $dob"
 }

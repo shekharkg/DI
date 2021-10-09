@@ -8,9 +8,9 @@ import dagger.hilt.android.components.ActivityComponent
 
 @Module
 @InstallIn(ActivityComponent::class)
-object FirstModule {
-
+object ThirdModule {
+    
     @Provides
-    fun provideBio() = Bio(name = "Ashok", dob = "10/10/1990")
-
+    fun provideWorkInfo() = WorkInfo(companyName = "HCL", exp = "10 years",
+        EducationInfo(highestEducation = "Graduation", collage = "CHRIST", stream = "BSc"))
 }

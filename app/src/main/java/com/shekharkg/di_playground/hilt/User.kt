@@ -4,23 +4,12 @@ import javax.inject.Inject
 
 class User @Inject constructor(
     private var bio: Bio,
-    private var educationInfo: EducationInfo
+    private var educationInfo: EducationInfo,
+    private var workInfo: WorkInfo
 ) {
 
 
-    var workInfo: WorkInfo = WorkInfo()
-
-
-    init {
-        workInfo.init(companyName = "HCL", exp = "10 years", educationInfo = educationInfo)
-    }
-
-    private fun getBio() = bio.asString()
-
-    private fun getEducation() = educationInfo.asString()
-
-
-    fun getUser() = "${getBio()} \n\n ${getEducation()}"
+    fun getUser() = "${bio.asString()} \n\n ${educationInfo.asString()} \n\n ${workInfo.asString()}"
 
 
 }
