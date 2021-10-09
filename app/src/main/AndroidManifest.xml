@@ -3,7 +3,6 @@
     package="com.shekharkg.di_playground">
 
     <application
-        android:name=".hilt.DIApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
