@@ -9,7 +9,7 @@ class EducationInfo {
 
     fun init(highestEducation: String, collage: String, stream: String) {
         this.highestEducation = highestEducation
-        this.collageName = collageName
+        this.collageName = collage
         this.stream = stream
     }
 

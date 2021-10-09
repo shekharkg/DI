@@ -17,6 +17,6 @@ class MainActivity : AppCompatActivity() {
 
 
         val textView = findViewById<TextView>(R.id.textView)
-        textView.text = user.toString()
+        textView.text = user.getName()
     }
 }
