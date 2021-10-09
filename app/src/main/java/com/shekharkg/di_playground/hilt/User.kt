@@ -2,22 +2,25 @@ package com.shekharkg.di_playground.hilt
 
 import javax.inject.Inject
 
-class User @Inject constructor() {
+class User @Inject constructor(
+    private var bio: Bio,
+    private var educationInfo: EducationInfo
+) {
 
-    @Inject lateinit var bio: Bio
+
     var workInfo: WorkInfo = WorkInfo()
-    var educationInfo: EducationInfo = EducationInfo()
 
 
-    fun init() {
-
-        educationInfo.init(highestEducation = "Graduation", collage = "CHRIST", stream = "BSc")
+    init {
         workInfo.init(companyName = "HCL", exp = "10 years", educationInfo = educationInfo)
     }
 
-    fun getName() = bio.name
+    private fun getBio() = bio.asString()
 
-    fun getBio() = bio.asString()
+    private fun getEducation() = educationInfo.asString()
+
+
+    fun getUser() = "${getBio()} \n\n ${getEducation()}"
 
 
 }

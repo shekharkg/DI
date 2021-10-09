@@ -15,9 +15,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        user.init()
 
         val textView = findViewById<TextView>(R.id.textView)
-        textView.text = user.getBio()
+        textView.text = user.getUser()
     }
 }

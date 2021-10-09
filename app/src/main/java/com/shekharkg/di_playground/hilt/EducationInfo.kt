@@ -1,16 +1,14 @@
 package com.shekharkg.di_playground.hilt
 
-class EducationInfo {
+import javax.inject.Inject
+
+class EducationInfo @Inject constructor(highestEducation: String, collage: String, stream: String) {
 
 
-    lateinit var highestEducation: String
-    lateinit var collageName: String
-    lateinit var stream: String
+    var highestEducation: String = highestEducation
+    var collageName: String = collage
+    var stream: String = stream
 
-    fun init(highestEducation: String, collage: String, stream: String) {
-        this.highestEducation = highestEducation
-        this.collageName = collage
-        this.stream = stream
-    }
+    fun asString() = "Education: $highestEducation, Collage: $collageName, Stream: $stream"
 
 }
