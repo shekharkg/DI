@@ -9,4 +9,6 @@ class Bio {
         this.name = name
         this.dob = dob
     }
+
+    fun asString() = "Name: $name, DOB: $dob"
 }

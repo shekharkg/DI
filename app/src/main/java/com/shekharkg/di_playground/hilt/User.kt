@@ -1,6 +1,8 @@
 package com.shekharkg.di_playground.hilt
 
-class User {
+import javax.inject.Inject
+
+class User @Inject constructor() {
 
     var bio: Bio = Bio()
     var workInfo: WorkInfo = WorkInfo()
@@ -14,6 +16,8 @@ class User {
     }
 
     fun getName() = bio.name
+
+    fun getBio() = bio.asString()
 
 
 }
