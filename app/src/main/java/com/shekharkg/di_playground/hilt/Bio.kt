@@ -1,14 +1,9 @@
 package com.shekharkg.di_playground.hilt
 
-class Bio {
+class Bio(paramName: String, paramDob: String) {
 
-    lateinit var name: String
-    lateinit var dob: String
-
-    fun init(name: String, dob: String) {
-        this.name = name
-        this.dob = dob
-    }
+    var name: String = paramName
+    var dob: String = paramDob
 
     fun asString() = "Name: $name, DOB: $dob"
 }
